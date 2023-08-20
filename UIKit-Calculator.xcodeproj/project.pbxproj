@@ -99,12 +99,14 @@
 		E6EEFC4C2A9209BC0034D768 /* UIKit-Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				E6EEFC4D2A9209BC0034D768 /* AppDelegate.swift */,
-				E6EEFC4F2A9209BC0034D768 /* SceneDelegate.swift */,
-				E6EEFC512A9209BC0034D768 /* ViewController.swift */,
 				E6EEFC532A9209BC0034D768 /* Main.storyboard */,
-				E6EEFC562A9209BD0034D768 /* Assets.xcassets */,
-				E6EEFC582A9209BD0034D768 /* LaunchScreen.storyboard */,
+				E6EEFC842A920A590034D768 /* App */,
+				E6EEFC812A920A4C0034D768 /* Model */,
+				E6EEFC802A920A3D0034D768 /* Views */,
+				E6EEFC7F2A920A380034D768 /* ViewControllers */,
+				E6EEFC822A920A4F0034D768 /* Extensions */,
+				E6EEFC832A920A530034D768 /* Helpers */,
+				E6EEFC7E2A920A300034D768 /* Resources */,
 				E6EEFC5B2A9209BD0034D768 /* Info.plist */,
 			);
 			path = "UIKit-Calculator";
@@ -125,6 +127,60 @@
 				E6EEFC702A9209BD0034D768 /* UIKit_CalculatorUITestsLaunchTests.swift */,
 			);
 			path = "UIKit-CalculatorUITests";
+			sourceTree = "<group>";
+		};
+		E6EEFC7E2A920A300034D768 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E6EEFC562A9209BD0034D768 /* Assets.xcassets */,
+				E6EEFC582A9209BD0034D768 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E6EEFC7F2A920A380034D768 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E6EEFC512A9209BC0034D768 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E6EEFC802A920A3D0034D768 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E6EEFC812A920A4C0034D768 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E6EEFC822A920A4F0034D768 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E6EEFC832A920A530034D768 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E6EEFC842A920A590034D768 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E6EEFC4D2A9209BC0034D768 /* AppDelegate.swift */,
+				E6EEFC4F2A9209BC0034D768 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,8 +499,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,9 +509,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "uz.buzurgmexr.UIKit-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -471,8 +531,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,9 +541,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "uz.buzurgmexr.UIKit-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
