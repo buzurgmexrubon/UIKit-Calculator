@@ -21,6 +21,11 @@
 		E6EEFC8E2A92109A0034D768 /* UnaryOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC8D2A92109A0034D768 /* UnaryOperator.swift */; };
 		E6EEFC902A9211120034D768 /* UnaryOperatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC8F2A9211120034D768 /* UnaryOperatorType.swift */; };
 		E6EEFC922A9211850034D768 /* UnaryOperatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC912A9211850034D768 /* UnaryOperatorProtocol.swift */; };
+		E6EEFC942A9261FD0034D768 /* BinaryOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC932A9261FD0034D768 /* BinaryOperator.swift */; };
+		E6EEFC962A9262160034D768 /* BinaryOperatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC952A9262160034D768 /* BinaryOperatorType.swift */; };
+		E6EEFC982A9265280034D768 /* BinaryOperatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC972A9265280034D768 /* BinaryOperatorProtocol.swift */; };
+		E6EEFC9A2A9265300034D768 /* BinaryOperatorPrecendence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC992A9265300034D768 /* BinaryOperatorPrecendence.swift */; };
+		E6EEFC9C2A9265C70034D768 /* BinaryOperatorAssociativity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC9B2A9265C70034D768 /* BinaryOperatorAssociativity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		E6EEFC8D2A92109A0034D768 /* UnaryOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnaryOperator.swift; sourceTree = "<group>"; };
 		E6EEFC8F2A9211120034D768 /* UnaryOperatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnaryOperatorType.swift; sourceTree = "<group>"; };
 		E6EEFC912A9211850034D768 /* UnaryOperatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnaryOperatorProtocol.swift; sourceTree = "<group>"; };
+		E6EEFC932A9261FD0034D768 /* BinaryOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryOperator.swift; sourceTree = "<group>"; };
+		E6EEFC952A9262160034D768 /* BinaryOperatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryOperatorType.swift; sourceTree = "<group>"; };
+		E6EEFC972A9265280034D768 /* BinaryOperatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryOperatorProtocol.swift; sourceTree = "<group>"; };
+		E6EEFC992A9265300034D768 /* BinaryOperatorPrecendence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryOperatorPrecendence.swift; sourceTree = "<group>"; };
+		E6EEFC9B2A9265C70034D768 /* BinaryOperatorAssociativity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryOperatorAssociativity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +226,11 @@
 		E6EEFC8B2A920D650034D768 /* Binary Operator */ = {
 			isa = PBXGroup;
 			children = (
+				E6EEFC932A9261FD0034D768 /* BinaryOperator.swift */,
+				E6EEFC952A9262160034D768 /* BinaryOperatorType.swift */,
+				E6EEFC972A9265280034D768 /* BinaryOperatorProtocol.swift */,
+				E6EEFC992A9265300034D768 /* BinaryOperatorPrecendence.swift */,
+				E6EEFC9B2A9265C70034D768 /* BinaryOperatorAssociativity.swift */,
 			);
 			path = "Binary Operator";
 			sourceTree = "<group>";
@@ -363,12 +378,17 @@
 			files = (
 				E6EEFC522A9209BC0034D768 /* ViewController.swift in Sources */,
 				E6EEFC902A9211120034D768 /* UnaryOperatorType.swift in Sources */,
+				E6EEFC962A9262160034D768 /* BinaryOperatorType.swift in Sources */,
 				E6EEFC8E2A92109A0034D768 /* UnaryOperator.swift in Sources */,
 				E6EEFC922A9211850034D768 /* UnaryOperatorProtocol.swift in Sources */,
+				E6EEFC9C2A9265C70034D768 /* BinaryOperatorAssociativity.swift in Sources */,
 				E6EEFC4E2A9209BC0034D768 /* AppDelegate.swift in Sources */,
 				E6EEFC502A9209BC0034D768 /* SceneDelegate.swift in Sources */,
 				E6EEFC872A920ABC0034D768 /* Token.swift in Sources */,
 				E6EEFC892A920BCA0034D768 /* TokenType.swift in Sources */,
+				E6EEFC982A9265280034D768 /* BinaryOperatorProtocol.swift in Sources */,
+				E6EEFC942A9261FD0034D768 /* BinaryOperator.swift in Sources */,
+				E6EEFC9A2A9265300034D768 /* BinaryOperatorPrecendence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
