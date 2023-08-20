@@ -19,16 +19,20 @@ protocol BinaryOperatorProtocol {
   
   // MARK: Methods
   
-  /// Cheking binary operation associativity.
+  /// Returns a Boolean value indicating whether this instance is higher than
+  /// the given value.
   ///
-  /// - Parameter second: Second binary operator for comparison.
-  /// - Returns: Self is higher or not than second binary operator.
+  /// - Parameter second: The value to compare with this value.
+  /// - Returns: `true` if self precendence is higher than `second` precendence.
+  ///  Otherwise, `false`.
   func isHigher(than second: BinaryOperator) -> Bool
   
-  /// Cheking binary operation associativity.
+  /// Returns a Boolean value indicating whether this instance is greater than
+  /// or equal to the given value.
   ///
-  /// - Parameter second: Second binary operator for comparison.
-  /// - Returns: Self is greater than or equal to second binary operator.
+  /// - Parameter second: The value to compare with this value.
+  /// - Returns: `true` if self precendence is `second` precendence.
+  ///  Otherwise, `false`.
   func isGreaterThanOrEqual(to second: BinaryOperator) -> Bool
   
   /// Calculate binary operation.
@@ -36,6 +40,6 @@ protocol BinaryOperatorProtocol {
   /// - Parameters:
   ///   - first: First operand of binary operation.
   ///   - second: Second operand of binary operation.
-  /// - Returns: Calculated value in Double.
+  /// - Returns: Double value after perform binary operation.
   func calculate(_ first: Double, _ second: Double) -> Double
 }

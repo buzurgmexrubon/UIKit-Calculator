@@ -12,7 +12,7 @@ struct UnaryOperator: UnaryOperatorProtocol {
   /// Calculate unary operation
   ///
   /// - Parameter number: Double value that needs calculate unary operation
-  /// - Returns: Calculated value in `Double`
+  /// - Returns: Double value after perform unary operation.
   func calculate(number: Double) -> Double {
     switch type {
       case .percent: return number * 0.01

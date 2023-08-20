@@ -25,18 +25,22 @@ struct BinaryOperator: BinaryOperatorProtocol {
     self.precedence = type.precendence
   }
   
-  /// Cheking binary operation associativity.
+  /// Returns a Boolean value indicating whether this instance is higher than
+  /// the given value.
   ///
-  /// - Parameter second: Second binary operator for comparison.
-  /// - Returns: Self is higher or not than second binary operator.
+  /// - Parameter second: The value to compare with this value.
+  /// - Returns: `true` if self precendence is higher than `second` precendence.
+  ///  Otherwise, `false`.
   func isHigher(than second: BinaryOperator) -> Bool {
     self.precedence.rawValue > second.precedence.rawValue
   }
   
-  /// Cheking binary operation associativity.
+  /// Returns a Boolean value indicating whether this instance is greater than
+  /// or equal to the given value.
   ///
-  /// - Parameter second: Second binary operator for comparison.
-  /// - Returns: Self is greater than or equal to second binary operator.
+  /// - Parameter second: The value to compare with this value.
+  /// - Returns: `true` if self precendence is greater than or equal to
+  /// `second` precendence. Otherwise, `false`.
   func isGreaterThanOrEqual(to second: BinaryOperator) -> Bool {
     self.precedence.rawValue >= second.precedence.rawValue
   }
@@ -46,7 +50,7 @@ struct BinaryOperator: BinaryOperatorProtocol {
   /// - Parameters:
   ///   - first: First operand of binary operation.
   ///   - second: Second operand of binary operation.
-  /// - Returns: Calculated value in Double.
+  /// - Returns: Double value after perform binary operation.
   func calculate(_ first: Double, _ second: Double) -> Double {
     switch self.type {
       case .add: return first + second

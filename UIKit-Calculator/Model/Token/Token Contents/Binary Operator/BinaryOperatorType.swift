@@ -6,10 +6,18 @@
 //
 
 enum BinaryOperatorType: String {
+  /// An operator that add two operands.
   case add = "+"
+
+  /// An operator that subtract two operands.
   case subtract = "-"
-  case divide = "÷"
+
+  /// An operator that multiply two operands.
   case multiply = "×"
+
+  /// An operator that divide two operands.
+  case divide = "÷"
+
 //  case exponent = "^"
 
   /// The precedence of the binary operator.

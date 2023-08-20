@@ -6,5 +6,6 @@
 //
 
 enum UnaryOperatorType: String {
+  /// An operator that calculate modules of operand.
   case percent = "%"
 }
