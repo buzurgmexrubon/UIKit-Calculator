@@ -27,6 +27,7 @@
 		E6EEFC9A2A9265300034D768 /* BinaryOperatorPrecendence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC992A9265300034D768 /* BinaryOperatorPrecendence.swift */; };
 		E6EEFC9C2A9265C70034D768 /* BinaryOperatorAssociativity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC9B2A9265C70034D768 /* BinaryOperatorAssociativity.swift */; };
 		E6EEFC9F2A9281FC0034D768 /* TokenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC9E2A9281FC0034D768 /* TokenFactory.swift */; };
+		E6EEFCA42A9287BF0034D768 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCA32A9287BF0034D768 /* Builder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		E6EEFC992A9265300034D768 /* BinaryOperatorPrecendence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryOperatorPrecendence.swift; sourceTree = "<group>"; };
 		E6EEFC9B2A9265C70034D768 /* BinaryOperatorAssociativity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryOperatorAssociativity.swift; sourceTree = "<group>"; };
 		E6EEFC9E2A9281FC0034D768 /* TokenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenFactory.swift; sourceTree = "<group>"; };
+		E6EEFCA32A9287BF0034D768 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,9 @@
 			isa = PBXGroup;
 			children = (
 				E6EEFC852A920AB60034D768 /* Token */,
+				E6EEFCA02A92878F0034D768 /* Builder */,
+				E6EEFCA12A9287A30034D768 /* Converter */,
+				E6EEFCA22A9287A60034D768 /* Evaluator */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -254,6 +259,28 @@
 				E6EEFC9E2A9281FC0034D768 /* TokenFactory.swift */,
 			);
 			path = "Token Factory";
+			sourceTree = "<group>";
+		};
+		E6EEFCA02A92878F0034D768 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				E6EEFCA32A9287BF0034D768 /* Builder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		E6EEFCA12A9287A30034D768 /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Converter;
+			sourceTree = "<group>";
+		};
+		E6EEFCA22A9287A60034D768 /* Evaluator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Evaluator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,6 +428,7 @@
 				E6EEFC982A9265280034D768 /* BinaryOperatorProtocol.swift in Sources */,
 				E6EEFC942A9261FD0034D768 /* BinaryOperator.swift in Sources */,
 				E6EEFC9A2A9265300034D768 /* BinaryOperatorPrecendence.swift in Sources */,
+				E6EEFCA42A9287BF0034D768 /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
