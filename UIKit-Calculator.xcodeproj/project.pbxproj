@@ -26,6 +26,7 @@
 		E6EEFC982A9265280034D768 /* BinaryOperatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC972A9265280034D768 /* BinaryOperatorProtocol.swift */; };
 		E6EEFC9A2A9265300034D768 /* BinaryOperatorPrecendence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC992A9265300034D768 /* BinaryOperatorPrecendence.swift */; };
 		E6EEFC9C2A9265C70034D768 /* BinaryOperatorAssociativity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC9B2A9265C70034D768 /* BinaryOperatorAssociativity.swift */; };
+		E6EEFC9F2A9281FC0034D768 /* TokenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC9E2A9281FC0034D768 /* TokenFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		E6EEFC972A9265280034D768 /* BinaryOperatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryOperatorProtocol.swift; sourceTree = "<group>"; };
 		E6EEFC992A9265300034D768 /* BinaryOperatorPrecendence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryOperatorPrecendence.swift; sourceTree = "<group>"; };
 		E6EEFC9B2A9265C70034D768 /* BinaryOperatorAssociativity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryOperatorAssociativity.swift; sourceTree = "<group>"; };
+		E6EEFC9E2A9281FC0034D768 /* TokenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 			children = (
 				E6EEFC862A920ABC0034D768 /* Token.swift */,
 				E6EEFC882A920BCA0034D768 /* TokenType.swift */,
+				E6EEFC9D2A9281ED0034D768 /* Token Factory */,
 				E6EEFC8A2A920D480034D768 /* Token Contents */,
 			);
 			path = Token;
@@ -243,6 +246,14 @@
 				E6EEFC912A9211850034D768 /* UnaryOperatorProtocol.swift */,
 			);
 			path = "Unary Operator";
+			sourceTree = "<group>";
+		};
+		E6EEFC9D2A9281ED0034D768 /* Token Factory */ = {
+			isa = PBXGroup;
+			children = (
+				E6EEFC9E2A9281FC0034D768 /* TokenFactory.swift */,
+			);
+			path = "Token Factory";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +397,7 @@
 				E6EEFC502A9209BC0034D768 /* SceneDelegate.swift in Sources */,
 				E6EEFC872A920ABC0034D768 /* Token.swift in Sources */,
 				E6EEFC892A920BCA0034D768 /* TokenType.swift in Sources */,
+				E6EEFC9F2A9281FC0034D768 /* TokenFactory.swift in Sources */,
 				E6EEFC982A9265280034D768 /* BinaryOperatorProtocol.swift in Sources */,
 				E6EEFC942A9261FD0034D768 /* BinaryOperator.swift in Sources */,
 				E6EEFC9A2A9265300034D768 /* BinaryOperatorPrecendence.swift in Sources */,
