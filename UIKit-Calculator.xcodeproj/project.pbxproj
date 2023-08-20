@@ -16,6 +16,8 @@
 		E6EEFC652A9209BD0034D768 /* UIKit_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC642A9209BD0034D768 /* UIKit_CalculatorTests.swift */; };
 		E6EEFC6F2A9209BD0034D768 /* UIKit_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC6E2A9209BD0034D768 /* UIKit_CalculatorUITests.swift */; };
 		E6EEFC712A9209BD0034D768 /* UIKit_CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC702A9209BD0034D768 /* UIKit_CalculatorUITestsLaunchTests.swift */; };
+		E6EEFC872A920ABC0034D768 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC862A920ABC0034D768 /* Token.swift */; };
+		E6EEFC892A920BCA0034D768 /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC882A920BCA0034D768 /* TokenType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		E6EEFC6A2A9209BD0034D768 /* UIKit-CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UIKit-CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6EEFC6E2A9209BD0034D768 /* UIKit_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit_CalculatorUITests.swift; sourceTree = "<group>"; };
 		E6EEFC702A9209BD0034D768 /* UIKit_CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit_CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E6EEFC862A920ABC0034D768 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		E6EEFC882A920BCA0034D768 /* TokenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 		E6EEFC812A920A4C0034D768 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E6EEFC852A920AB60034D768 /* Token */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +186,15 @@
 				E6EEFC4F2A9209BC0034D768 /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		E6EEFC852A920AB60034D768 /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				E6EEFC862A920ABC0034D768 /* Token.swift */,
+				E6EEFC882A920BCA0034D768 /* TokenType.swift */,
+			);
+			path = Token;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +331,8 @@
 				E6EEFC522A9209BC0034D768 /* ViewController.swift in Sources */,
 				E6EEFC4E2A9209BC0034D768 /* AppDelegate.swift in Sources */,
 				E6EEFC502A9209BC0034D768 /* SceneDelegate.swift in Sources */,
+				E6EEFC872A920ABC0034D768 /* Token.swift in Sources */,
+				E6EEFC892A920BCA0034D768 /* TokenType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
