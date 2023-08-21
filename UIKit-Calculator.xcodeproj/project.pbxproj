@@ -28,6 +28,9 @@
 		E6EEFC9C2A9265C70034D768 /* BinaryOperatorAssociativity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC9B2A9265C70034D768 /* BinaryOperatorAssociativity.swift */; };
 		E6EEFC9F2A9281FC0034D768 /* TokenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC9E2A9281FC0034D768 /* TokenFactory.swift */; };
 		E6EEFCA42A9287BF0034D768 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCA32A9287BF0034D768 /* Builder.swift */; };
+		E6EEFCA62A928C8B0034D768 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCA52A928C8B0034D768 /* Converter.swift */; };
+		E6EEFCA82A928C920034D768 /* ConverterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCA72A928C920034D768 /* ConverterProtocol.swift */; };
+		E6EEFCAA2A928CCC0034D768 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCA92A928CCC0034D768 /* Typealiases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		E6EEFC9B2A9265C70034D768 /* BinaryOperatorAssociativity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryOperatorAssociativity.swift; sourceTree = "<group>"; };
 		E6EEFC9E2A9281FC0034D768 /* TokenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenFactory.swift; sourceTree = "<group>"; };
 		E6EEFCA32A9287BF0034D768 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		E6EEFCA52A928C8B0034D768 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		E6EEFCA72A928C920034D768 /* ConverterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterProtocol.swift; sourceTree = "<group>"; };
+		E6EEFCA92A928CCC0034D768 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +204,7 @@
 		E6EEFC832A920A530034D768 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E6EEFCA92A928CCC0034D768 /* Typealiases.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -272,6 +279,8 @@
 		E6EEFCA12A9287A30034D768 /* Converter */ = {
 			isa = PBXGroup;
 			children = (
+				E6EEFCA52A928C8B0034D768 /* Converter.swift */,
+				E6EEFCA72A928C920034D768 /* ConverterProtocol.swift */,
 			);
 			path = Converter;
 			sourceTree = "<group>";
@@ -416,6 +425,8 @@
 			files = (
 				E6EEFC522A9209BC0034D768 /* ViewController.swift in Sources */,
 				E6EEFC902A9211120034D768 /* UnaryOperatorType.swift in Sources */,
+				E6EEFCA82A928C920034D768 /* ConverterProtocol.swift in Sources */,
+				E6EEFCA62A928C8B0034D768 /* Converter.swift in Sources */,
 				E6EEFC962A9262160034D768 /* BinaryOperatorType.swift in Sources */,
 				E6EEFC8E2A92109A0034D768 /* UnaryOperator.swift in Sources */,
 				E6EEFC922A9211850034D768 /* UnaryOperatorProtocol.swift in Sources */,
@@ -426,6 +437,7 @@
 				E6EEFC892A920BCA0034D768 /* TokenType.swift in Sources */,
 				E6EEFC9F2A9281FC0034D768 /* TokenFactory.swift in Sources */,
 				E6EEFC982A9265280034D768 /* BinaryOperatorProtocol.swift in Sources */,
+				E6EEFCAA2A928CCC0034D768 /* Typealiases.swift in Sources */,
 				E6EEFC942A9261FD0034D768 /* BinaryOperator.swift in Sources */,
 				E6EEFC9A2A9265300034D768 /* BinaryOperatorPrecendence.swift in Sources */,
 				E6EEFCA42A9287BF0034D768 /* Builder.swift in Sources */,
