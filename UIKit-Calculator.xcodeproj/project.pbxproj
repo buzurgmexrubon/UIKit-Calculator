@@ -33,6 +33,14 @@
 		E6EEFCAA2A928CCC0034D768 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCA92A928CCC0034D768 /* Typealiases.swift */; };
 		E6EEFCAC2A934E230034D768 /* Evaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCAB2A934E230034D768 /* Evaluator.swift */; };
 		E6EEFCAE2A934E2B0034D768 /* CalculatorEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCAD2A934E2B0034D768 /* CalculatorEvaluator.swift */; };
+		E6EEFCB12A935E880034D768 /* NumberBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCB02A935E880034D768 /* NumberBucket.swift */; };
+		E6EEFCB32A9373770034D768 /* NumberDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCB22A9373770034D768 /* NumberDirector.swift */; };
+		E6EEFCB52A9374580034D768 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCB42A9374580034D768 /* Symbols.swift */; };
+		E6EEFCB72A937FBF0034D768 /* NumberRefinery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCB62A937FBF0034D768 /* NumberRefinery.swift */; };
+		E6EEFCC12A9381670034D768 /* CalculatorNumberDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCC02A9381670034D768 /* CalculatorNumberDirector.swift */; };
+		E6EEFCC32A9382210034D768 /* CalculatorNumberRefinery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCC22A9382210034D768 /* CalculatorNumberRefinery.swift */; };
+		E6EEFCC52A93898E0034D768 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCC42A93898E0034D768 /* Double+Extension.swift */; };
+		E6EEFCC72A9392000034D768 /* Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCC62A9392000034D768 /* Number+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +91,14 @@
 		E6EEFCA92A928CCC0034D768 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		E6EEFCAB2A934E230034D768 /* Evaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evaluator.swift; sourceTree = "<group>"; };
 		E6EEFCAD2A934E2B0034D768 /* CalculatorEvaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorEvaluator.swift; sourceTree = "<group>"; };
+		E6EEFCB02A935E880034D768 /* NumberBucket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberBucket.swift; sourceTree = "<group>"; };
+		E6EEFCB22A9373770034D768 /* NumberDirector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberDirector.swift; sourceTree = "<group>"; };
+		E6EEFCB42A9374580034D768 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
+		E6EEFCB62A937FBF0034D768 /* NumberRefinery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberRefinery.swift; sourceTree = "<group>"; };
+		E6EEFCC02A9381670034D768 /* CalculatorNumberDirector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorNumberDirector.swift; sourceTree = "<group>"; };
+		E6EEFCC22A9382210034D768 /* CalculatorNumberRefinery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorNumberRefinery.swift; sourceTree = "<group>"; };
+		E6EEFCC42A93898E0034D768 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		E6EEFCC62A9392000034D768 /* Number+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +210,7 @@
 				E6EEFCA02A92878F0034D768 /* Builder */,
 				E6EEFCA12A9287A30034D768 /* Converter */,
 				E6EEFCA22A9287A60034D768 /* Evaluator */,
+				E6EEFCAF2A935CCD0034D768 /* Number */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,6 +218,8 @@
 		E6EEFC822A920A4F0034D768 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E6EEFCC42A93898E0034D768 /* Double+Extension.swift */,
+				E6EEFCC62A9392000034D768 /* Number+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -296,6 +315,43 @@
 				E6EEFCAD2A934E2B0034D768 /* CalculatorEvaluator.swift */,
 			);
 			path = Evaluator;
+			sourceTree = "<group>";
+		};
+		E6EEFCAF2A935CCD0034D768 /* Number */ = {
+			isa = PBXGroup;
+			children = (
+				E6EEFCBF2A93814E0034D768 /* Number Bucket */,
+				E6EEFCBE2A9381490034D768 /* Number Director */,
+				E6EEFCBD2A9381410034D768 /* Number Refinery */,
+				E6EEFCB42A9374580034D768 /* Symbols.swift */,
+			);
+			path = Number;
+			sourceTree = "<group>";
+		};
+		E6EEFCBD2A9381410034D768 /* Number Refinery */ = {
+			isa = PBXGroup;
+			children = (
+				E6EEFCB62A937FBF0034D768 /* NumberRefinery.swift */,
+				E6EEFCC22A9382210034D768 /* CalculatorNumberRefinery.swift */,
+			);
+			path = "Number Refinery";
+			sourceTree = "<group>";
+		};
+		E6EEFCBE2A9381490034D768 /* Number Director */ = {
+			isa = PBXGroup;
+			children = (
+				E6EEFCB22A9373770034D768 /* NumberDirector.swift */,
+				E6EEFCC02A9381670034D768 /* CalculatorNumberDirector.swift */,
+			);
+			path = "Number Director";
+			sourceTree = "<group>";
+		};
+		E6EEFCBF2A93814E0034D768 /* Number Bucket */ = {
+			isa = PBXGroup;
+			children = (
+				E6EEFCB02A935E880034D768 /* NumberBucket.swift */,
+			);
+			path = "Number Bucket";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,9 +485,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6EEFCB32A9373770034D768 /* NumberDirector.swift in Sources */,
 				E6EEFC522A9209BC0034D768 /* ViewController.swift in Sources */,
 				E6EEFC902A9211120034D768 /* UnaryOperatorType.swift in Sources */,
 				E6EEFCA82A928C920034D768 /* CalculatorConverter.swift in Sources */,
+				E6EEFCB72A937FBF0034D768 /* NumberRefinery.swift in Sources */,
+				E6EEFCB12A935E880034D768 /* NumberBucket.swift in Sources */,
+				E6EEFCC72A9392000034D768 /* Number+Extension.swift in Sources */,
+				E6EEFCC12A9381670034D768 /* CalculatorNumberDirector.swift in Sources */,
 				E6EEFCA62A928C8B0034D768 /* Converter.swift in Sources */,
 				E6EEFC962A9262160034D768 /* BinaryOperatorType.swift in Sources */,
 				E6EEFC8E2A92109A0034D768 /* UnaryOperator.swift in Sources */,
@@ -443,11 +504,14 @@
 				E6EEFC872A920ABC0034D768 /* Token.swift in Sources */,
 				E6EEFC892A920BCA0034D768 /* TokenType.swift in Sources */,
 				E6EEFC9F2A9281FC0034D768 /* TokenFactory.swift in Sources */,
+				E6EEFCC32A9382210034D768 /* CalculatorNumberRefinery.swift in Sources */,
 				E6EEFC982A9265280034D768 /* CalculatorBinaryOperator.swift in Sources */,
+				E6EEFCC52A93898E0034D768 /* Double+Extension.swift in Sources */,
 				E6EEFCAE2A934E2B0034D768 /* CalculatorEvaluator.swift in Sources */,
 				E6EEFCAA2A928CCC0034D768 /* Typealiases.swift in Sources */,
 				E6EEFC942A9261FD0034D768 /* BinaryOperator.swift in Sources */,
 				E6EEFC9A2A9265300034D768 /* BinaryOperatorPrecendence.swift in Sources */,
+				E6EEFCB52A9374580034D768 /* Symbols.swift in Sources */,
 				E6EEFCA42A9287BF0034D768 /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
