@@ -5,7 +5,7 @@
 //  Created by Buzurgmexr Sultonaliyev on 21/08/23.
 //
 
-protocol CalculatorEvaluator {
+protocol CalculatorEvaluator: AnyObject {
   /// Evaluate expression and return result.
   ///
   /// - Parameter expression: Collection of tokens for evaluation.
