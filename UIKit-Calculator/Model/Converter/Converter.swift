@@ -5,7 +5,7 @@
 //  Created by Buzurgmexr Sultonaliyev on 20/08/23.
 //
 
-class Converter: ConverterProtocol {
+class Converter: CalculatorConverter {
   /// Collection of binary operators that prepare for `resultBuffer`.
   var tempBuffer: [BinaryOperator] = []
   

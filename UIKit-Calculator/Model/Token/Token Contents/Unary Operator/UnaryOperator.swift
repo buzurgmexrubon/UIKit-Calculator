@@ -5,7 +5,7 @@
 //  Created by Buzurgmexr Sultonaliyev on 20/08/23.
 //
 
-struct UnaryOperator: UnaryOperatorProtocol {
+struct UnaryOperator: CalculatorUnaryOperator {
   /// The type of the unary operation
   var type: UnaryOperatorType
 

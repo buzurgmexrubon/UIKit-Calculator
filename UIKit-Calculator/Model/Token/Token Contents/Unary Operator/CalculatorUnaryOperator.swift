@@ -6,7 +6,7 @@
 //
 
 import UIKit
-protocol UnaryOperatorProtocol {
+protocol CalculatorUnaryOperator {
   /// The type of the unary operation
   var type: UnaryOperatorType { get }
 
