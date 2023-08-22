@@ -9,47 +9,47 @@ class Core {
   /// <#Description#>
   weak var delegate: CoreDelegate?
   
-  /// <#Description#>
+  /// The token factory that create token from String.
   private let factory = TokenFactory()
   
-  /// <#Description#>
+  /// Expression converter.
   private let converter = Converter()
   
-  /// <#Description#>
+  /// Expression evaluator.
   private let evaluator = Evaluator()
   
-  /// <#Description#>
+  /// Building expression.
   private let buildingExpression = Builder<Token>()
   
-  /// <#Description#>
+  /// Includes most recent operand token if it exists.
   private var mostRecentOperandToken: Token?
   
-  /// <#Description#>
+  /// Includes most recent binary operator token if it exists.
   private var mostRecentBinaryOperatorToken: Token?
   
-  /// <#Description#>
+  /// Includes most recent token if it exists.
   private var mostRecentToken: Token?
   
-  /// <#Description#>
+  /// Includes most recent evaluated if it exists.
   private var mostRecentEvaluated: Double?
   
-  /// <#Description#>
+  /// Evaluation state.
   private var isEvaluating = false
   
-  /// <#Description#>
-  private var evaluatedOperator: Token?
+  /// Includes evaluated binary operator token if it exists.
+  private var evaluatedBinaryOperator: Token?
   
-  /// <#Description#>
+  /// Includes evaluated operand token if it exists.
   private var evaluatedOperand: Token?
   
-  /// <#Description#>
+  /// Result of the evaluated expression.
   private var value: Double = 0.0 {
     didSet { delegate?.getEvaluated(value: value) }
   }
   
-  /// <#Description#>
+  /// Receive operand from `operand`.
   ///
-  /// - Parameter operand: <#operand description#>
+  /// - Parameter operand: Received operand.
   func receive(operand: String) {
     let operandToken = makeToken(from: operand)
     
@@ -65,9 +65,9 @@ class Core {
     }
   }
   
-  /// <#Description#>
+  /// Receive binary operator from `binaryOperator`.
   ///
-  /// - Parameter binaryOperator: <#binaryOperator description#>
+  /// - Parameter binaryOperator: Received binary operator.
   func receive(binaryOperator: String) {
     let token = makeToken(from: binaryOperator)
     
@@ -81,10 +81,9 @@ class Core {
     add(binaryOperator: token)
   }
   
-  
-  /// <#Description#>
+  /// Received unary operator from `unaryOperator`.
   ///
-  /// - Parameter unaryOperator: <#unaryOperator description#>
+  /// - Parameter unaryOperator: Received unary operator.
   func receive(unaryOperator: String) {
     guard buildingExpression.count >= 1 else { return }
     
@@ -110,10 +109,9 @@ class Core {
     }
   }
   
-  
-  /// <#Description#>
+  /// Receive evaluation.
   ///
-  /// - Returns: <#description#>
+  /// - Returns: Evaluated value in Double.
   func receiveEvaluation() -> Double? {
     if isEvaluating { prepareContinuingEvaluation() }
     else if isIncompleteExpression() { reset(); return nil }
@@ -125,7 +123,7 @@ class Core {
   
   // MARK: - `Clear`
   
-  /// <#Description#>
+  /// Receive clear and clear
   func receiveClear() {
     reset()
   }
@@ -134,37 +132,39 @@ class Core {
 // MARK: Checking Methods
 
 private extension Core {
-  /// <#Description#>
+  /// Return expression is incomplete or not.
   ///
-  /// - Returns: <#description#>
+  /// - Returns: `true` if `buildExpression` values count less than or
+  /// equal to 1. Otherwise, `false`.
   func isIncompleteExpression() -> Bool {
     buildingExpression.value.count <= 1
   }
   
-  /// <#Description#>
+  /// Return expression is unbalanced or not.
   ///
-  /// - Returns: <#description#>
+  /// - Returns: `true` if `mostRecentToken` is an operand. Otherwise, `false`.
   func isUnbalancedExpression() -> Bool {
     mostRecentToken?.extractOperand == nil
   }
   
-  /// <#Description#>
+  /// Returns last evaluated is equal or not to most recent evaluated value.
   ///
-  /// - Parameter string: <#string description#>
-  /// - Returns: <#description#>
-  func isEqualWithLastEvaluated(_ string: String) -> Bool {
-    Double(string)!.isEqual(to: mostRecentEvaluated!)
+  /// - Parameter value: Evaluated value in String.
+  /// - Returns: `true` if evaluated value equal to `mostRecentEvaluated`.
+  /// Otherwise, `false`.
+  func isEqualWithLastEvaluated(_ value: String) -> Bool {
+    Double(value)!.isEqual(to: mostRecentEvaluated!)
   }
 }
 
 private extension Core {
-  /// <#Description#>
+  /// Perform evaluation.
   ///
-  /// - Returns: <#description#>
+  /// - Returns: The evaluated Double value.
   func performEvaluation() -> Double {
     let evaluated = evaluate()
     evaluatedOperand = mostRecentOperandToken
-    evaluatedOperator = mostRecentBinaryOperatorToken
+    evaluatedBinaryOperator = mostRecentBinaryOperatorToken
     mostRecentEvaluated = evaluated
     
     setContinuingEvaluation()
@@ -172,49 +172,49 @@ private extension Core {
     return evaluated
   }
   
-  /// <#Description#>
+  /// Set continuing evaluation.
   func setContinuingEvaluation() {
     isEvaluating = true
   }
   
-  /// <#Description#>
+  /// Stop continuing Evaluation.
   func stopContinuingEvaluation() {
     isEvaluating = false
   }
   
-  /// <#Description#>
+  /// Prepare continuing evaluation.
   func prepareContinuingEvaluation() {
     add(operand: evaluatedOperand!)
-    add(binaryOperator: evaluatedOperator!)
+    add(binaryOperator: evaluatedBinaryOperator!)
   }
   
-  /// <#Description#>
+  /// Make token from `value`.
   ///
-  /// - Parameter string: <#string description#>
-  /// - Returns: <#description#>
-  func makeToken(from string: String) -> Token {
-    factory.create(string)
+  /// - Parameter value: The String value needs to create token.
+  /// - Returns: Token that created from `value`.
+  func makeToken(from value: String) -> Token {
+    factory.create(value)
   }
   
-  /// <#Description#>
+  /// Add token to building expression.
   ///
-  /// - Parameter token: <#token description#>
+  /// - Parameter token: The token of the button.
   func add(token: Token) {
     buildingExpression.value = [token]
     mostRecentToken = token
   }
   
-  /// <#Description#>
+  /// Add operand to building expression.
   ///
-  /// - Parameter operand: <#operand description#>
+  /// - Parameter operand: The token of the button.
   func add(operand: Token) {
     add(token: operand)
     mostRecentOperandToken = operand
   }
   
-  /// <#Description#>
+  /// Add binary operator to building expression.
   ///
-  /// - Parameter binaryOperator: <#binaryOperator description#>
+  /// - Parameter binaryOperator: The token of the button.
   func add(binaryOperator: Token) {
     if buildingExpression.count == 0 {
       let zeroToken = makeToken(from: "0")
@@ -225,15 +225,15 @@ private extension Core {
     mostRecentBinaryOperatorToken = binaryOperator
   }
   
-  /// <#Description#>
+  /// Replace binary operator with received token.
   ///
-  /// - Parameter token: <#token description#>
+  /// - Parameter token: The token of the button.
   func replaceBinaryOperator(with token: Token) {
     buildingExpression.remove()
     add(binaryOperator: token)
   }
   
-  /// <#Description#>
+  /// Break expression.
   ///
   func breakExpression() {
     let evaluated = evaluate()
@@ -242,37 +242,38 @@ private extension Core {
     value = evaluated
   }
   
-  /// <#Description#>
+  /// Make balanced expression.
   func makeBalancedExpression() {
     add(operand: mostRecentOperandToken!)
   }
   
-  /// <#Description#>
+  /// Cheking most recent token is binary operator or not.
   ///
-  /// - Returns: <#description#>
+  /// - Returns: `true` if most recent token is not binary operator.
+  ///  Otherwise, `false`.
   func mostRecentTokenIsBinaryOperator() -> Bool {
     mostRecentToken?.extractBinaryOperator != nil
   }
   
-  /// <#Description#>
+  /// Clear build expression elements.
   func clearRecordedExpression() {
     buildingExpression.clear()
   }
   
-  /// <#Description#>
+  /// Reset to starting state.
   func reset() {
     clearRecordedExpression()
     mostRecentToken = nil
     mostRecentOperandToken = nil
     mostRecentBinaryOperatorToken = nil
     evaluatedOperand = nil
-    evaluatedOperator = nil
+    evaluatedBinaryOperator = nil
     isEvaluating = false
   }
   
-  /// <#Description#>
-  /// 
-  /// - Returns: <#description#>
+  /// Evaluate expression.
+  ///
+  /// - Returns: Evaluated Double value.
   func evaluate() -> Double {
     let expression = buildingExpression.build()
     let converted = converter.convert(expression)
