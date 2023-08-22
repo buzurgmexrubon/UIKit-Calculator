@@ -11,9 +11,6 @@ struct BinaryOperator: CalculatorBinaryOperator {
   /// The type of the binary operator.
   var type: BinaryOperatorType
   
-  /// The associativity of the binary operator.
-  var associativity: BinaryOperatorAssociativity
-  
   /// The precedence of the binary operator.
   var precedence: BinaryOperatorPrecedence
   
@@ -21,7 +18,6 @@ struct BinaryOperator: CalculatorBinaryOperator {
   
   init(type: BinaryOperatorType) {
     self.type = type
-    self.associativity = type.associativity
     self.precedence = type.precendence
   }
   

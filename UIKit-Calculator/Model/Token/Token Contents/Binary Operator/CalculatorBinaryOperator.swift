@@ -11,9 +11,6 @@ protocol CalculatorBinaryOperator {
   /// The type of the binary operator.
   var type: BinaryOperatorType { get }
   
-  /// The associativity of the binary operator.
-  var associativity: BinaryOperatorAssociativity { get }
-  
   /// The precedence of the binary operator.
   var precedence: BinaryOperatorPrecedence { get }
   
