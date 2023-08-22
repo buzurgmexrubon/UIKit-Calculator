@@ -49,4 +49,18 @@ class Builder<Element> {
   func clear() {
     elements.removeAll()
   }
+
+  /// Insert element to `elements`.
+  ///
+  /// - Parameters:
+  ///   - element: The new element to insert into the array.
+  ///   - index: The position at which to insert `element`.
+//  func insert(_ element: Element, at index: Int) {
+//    guard index < elements.count else { return }
+//    if count == 0 {
+//      elements.append(element)
+//    } else {
+//      elements.insert(element, at: index)
+//    }
+//  }
 }
