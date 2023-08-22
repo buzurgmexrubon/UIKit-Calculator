@@ -5,14 +5,14 @@
 //  Created by Buzurgmexr Sultonaliyev on 20/08/23.
 //
 
-enum TokenType {
+enum TokenContentType {
   case operand(Double)
   case unaryOperator(UnaryOperator)
   case binaryOperator(BinaryOperator)
 }
 
-enum TokenTypeOnly {
+enum TokenType {
   case operand
-  case unaryOperator
-  case binaryOperator
+  case unaryOperator(UnaryOperatorType)
+  case binaryOperator(BinaryOperatorType)
 }

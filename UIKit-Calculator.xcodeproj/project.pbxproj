@@ -16,7 +16,7 @@
 		E6EEFC6F2A9209BD0034D768 /* UIKit_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC6E2A9209BD0034D768 /* UIKit_CalculatorUITests.swift */; };
 		E6EEFC712A9209BD0034D768 /* UIKit_CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC702A9209BD0034D768 /* UIKit_CalculatorUITestsLaunchTests.swift */; };
 		E6EEFC872A920ABC0034D768 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC862A920ABC0034D768 /* Token.swift */; };
-		E6EEFC892A920BCA0034D768 /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC882A920BCA0034D768 /* TokenType.swift */; };
+		E6EEFC892A920BCA0034D768 /* TokenContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC882A920BCA0034D768 /* TokenContentType.swift */; };
 		E6EEFC8E2A92109A0034D768 /* UnaryOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC8D2A92109A0034D768 /* UnaryOperator.swift */; };
 		E6EEFC902A9211120034D768 /* UnaryOperatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC8F2A9211120034D768 /* UnaryOperatorType.swift */; };
 		E6EEFC922A9211850034D768 /* CalculatorUnaryOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC912A9211850034D768 /* CalculatorUnaryOperator.swift */; };
@@ -83,7 +83,7 @@
 		E6EEFC6E2A9209BD0034D768 /* UIKit_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit_CalculatorUITests.swift; sourceTree = "<group>"; };
 		E6EEFC702A9209BD0034D768 /* UIKit_CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit_CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E6EEFC862A920ABC0034D768 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		E6EEFC882A920BCA0034D768 /* TokenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenType.swift; sourceTree = "<group>"; };
+		E6EEFC882A920BCA0034D768 /* TokenContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenContentType.swift; sourceTree = "<group>"; };
 		E6EEFC8D2A92109A0034D768 /* UnaryOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnaryOperator.swift; sourceTree = "<group>"; };
 		E6EEFC8F2A9211120034D768 /* UnaryOperatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnaryOperatorType.swift; sourceTree = "<group>"; };
 		E6EEFC912A9211850034D768 /* CalculatorUnaryOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUnaryOperator.swift; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				E6EEFC862A920ABC0034D768 /* Token.swift */,
-				E6EEFC882A920BCA0034D768 /* TokenType.swift */,
+				E6EEFC882A920BCA0034D768 /* TokenContentType.swift */,
 				E6EEFC9D2A9281ED0034D768 /* Token Factory */,
 				E6EEFC8A2A920D480034D768 /* Token Contents */,
 			);
@@ -567,7 +567,7 @@
 				E6EEFCE52A9454ED0034D768 /* ViewController.swift in Sources */,
 				E6EEFCD42A93D4B90034D768 /* DummyView.swift in Sources */,
 				E6EEFC872A920ABC0034D768 /* Token.swift in Sources */,
-				E6EEFC892A920BCA0034D768 /* TokenType.swift in Sources */,
+				E6EEFC892A920BCA0034D768 /* TokenContentType.swift in Sources */,
 				E6EEFC9F2A9281FC0034D768 /* TokenFactory.swift in Sources */,
 				E6EEFCC32A9382210034D768 /* CalculatorNumberRefinery.swift in Sources */,
 				E6EEFC982A9265280034D768 /* CalculatorBinaryOperator.swift in Sources */,
