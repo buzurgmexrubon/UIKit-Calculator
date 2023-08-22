@@ -39,31 +39,9 @@ class Converter: CalculatorConverter {
   /// - Parameter token: Token for handling.
   private func handle(token: Token) {
     if let newOperator = token.extractBinaryOperator {
-      for recentOperator in tempBuffer.reversed() {
-        if check(newOperator: newOperator, recentOperator: recentOperator) {
-          let removed = tempBuffer.removeLast()
-          resultBuffer.append(Token(.binaryOperator(.init(type: removed.type))))
-        } else { break }
-      }
       tempBuffer.append(newOperator)
     } else if token.extractOperand != nil {
       resultBuffer.append(token)
     }
-  }
-}
-
-private extension Converter {
-  /// <#Description#>
-  ///
-  /// - Parameters:
-  ///   - newOperator: <#newOperator description#>
-  ///   - recentOperator: <#recentOperator description#>
-  /// - Returns: <#description#>
-  func check(newOperator: BinaryOperator, recentOperator: BinaryOperator) -> Bool {
-    return (newOperator.associativity == .left
-      && newOperator.precedence.rawValue <= recentOperator.precedence.rawValue)
-      ||
-      (newOperator.associativity == .right
-        && newOperator.precedence.rawValue < recentOperator.precedence.rawValue)
   }
 }
