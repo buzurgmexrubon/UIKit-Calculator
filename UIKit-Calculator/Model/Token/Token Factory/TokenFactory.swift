@@ -12,14 +12,11 @@ struct TokenFactory {
   /// - Returns: A Token from `value`.
   func create(_ value: String) -> Token {
     if isOperand(value) {
-      return create(token: value,
-                    for: .operand)
+      return create(token: value, for: .operand)
     } else if isUnaryOperator(value) {
-      return create(token: value,
-                    for: .unaryOperator(UnaryOperatorType(rawValue: value)!))
+      return create(token: value, for: .unaryOperator(.init(rawValue: value)!))
     } else {
-      return create(token: value,
-                    for: .binaryOperator(BinaryOperatorType(rawValue: value)!))
+      return create(token: value, for: .binaryOperator(.init(rawValue: value)!))
     }
   }
 }
@@ -53,29 +50,6 @@ private extension TokenFactory {
         }
     }
   }
-
-//  func create(token: String, for type: TokenTypeOnly) -> Token? {
-//    switch type {
-//      case .operand:
-//        return Token(.operand(Double(token)!))
-//      case .unaryOperator:
-//        if token == "%" {
-//          return Token(.unaryOperator(.init(type: .percent)))
-//        }
-//        return nil
-//      case .binaryOperator:
-//        if token == "+" {
-//          return Token(.binaryOperator(.init(type: .add)))
-//        } else if token == "−" {
-//          return Token(.binaryOperator(.init(type: .subtract)))
-//        } else if token == "×" {
-//          return Token(.binaryOperator(.init(type: .multiply)))
-//        } else if token == "÷" {
-//          return Token(.binaryOperator(.init(type: .divide)))
-//        }
-//        return nil
-//    }
-//  }
 }
 
 // MARK: - Cheking
