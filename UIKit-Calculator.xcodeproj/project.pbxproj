@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E6EEFC4E2A9209BC0034D768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC4D2A9209BC0034D768 /* AppDelegate.swift */; };
 		E6EEFC502A9209BC0034D768 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC4F2A9209BC0034D768 /* SceneDelegate.swift */; };
-		E6EEFC522A9209BC0034D768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFC512A9209BC0034D768 /* ViewController.swift */; };
 		E6EEFC552A9209BC0034D768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6EEFC532A9209BC0034D768 /* Main.storyboard */; };
 		E6EEFC572A9209BD0034D768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6EEFC562A9209BD0034D768 /* Assets.xcassets */; };
 		E6EEFC5A2A9209BD0034D768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6EEFC582A9209BD0034D768 /* LaunchScreen.storyboard */; };
@@ -41,6 +40,16 @@
 		E6EEFCC32A9382210034D768 /* CalculatorNumberRefinery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCC22A9382210034D768 /* CalculatorNumberRefinery.swift */; };
 		E6EEFCC52A93898E0034D768 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCC42A93898E0034D768 /* Double+Extension.swift */; };
 		E6EEFCC72A9392000034D768 /* Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCC62A9392000034D768 /* Number+Extension.swift */; };
+		E6EEFCD42A93D4B90034D768 /* DummyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCCD2A93D4B90034D768 /* DummyView.swift */; };
+		E6EEFCD52A93D4B90034D768 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCD02A93D4B90034D768 /* ButtonView.swift */; };
+		E6EEFCD62A93D4B90034D768 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCD22A93D4B90034D768 /* ButtonsView.swift */; };
+		E6EEFCD72A93D4B90034D768 /* ButtonsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCD32A93D4B90034D768 /* ButtonsViewDelegate.swift */; };
+		E6EEFCD92A93D4FF0034D768 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCD82A93D4FF0034D768 /* UIColor+Extension.swift */; };
+		E6EEFCDD2A93DB370034D768 /* CoreDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCDC2A93DB370034D768 /* CoreDelegate.swift */; };
+		E6EEFCDF2A93DB3B0034D768 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCDE2A93DB3B0034D768 /* Core.swift */; };
+		E6EEFCE12A93DC460034D768 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCE02A93DC460034D768 /* String+Extension.swift */; };
+		E6EEFCE32A93DC760034D768 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCE22A93DC760034D768 /* UIView+Extension.swift */; };
+		E6EEFCE52A9454ED0034D768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCE42A9454ED0034D768 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +73,6 @@
 		E6EEFC4A2A9209BC0034D768 /* UIKit-Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKit-Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6EEFC4D2A9209BC0034D768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6EEFC4F2A9209BC0034D768 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E6EEFC512A9209BC0034D768 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E6EEFC542A9209BC0034D768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E6EEFC562A9209BD0034D768 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6EEFC592A9209BD0034D768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,6 +107,16 @@
 		E6EEFCC22A9382210034D768 /* CalculatorNumberRefinery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorNumberRefinery.swift; sourceTree = "<group>"; };
 		E6EEFCC42A93898E0034D768 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		E6EEFCC62A9392000034D768 /* Number+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Extension.swift"; sourceTree = "<group>"; };
+		E6EEFCCD2A93D4B90034D768 /* DummyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyView.swift; sourceTree = "<group>"; };
+		E6EEFCD02A93D4B90034D768 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		E6EEFCD22A93D4B90034D768 /* ButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		E6EEFCD32A93D4B90034D768 /* ButtonsViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsViewDelegate.swift; sourceTree = "<group>"; };
+		E6EEFCD82A93D4FF0034D768 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		E6EEFCDC2A93DB370034D768 /* CoreDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDelegate.swift; sourceTree = "<group>"; };
+		E6EEFCDE2A93DB3B0034D768 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
+		E6EEFCE02A93DC460034D768 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		E6EEFCE22A93DC760034D768 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		E6EEFCE42A9454ED0034D768 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,7 +209,7 @@
 		E6EEFC7F2A920A380034D768 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E6EEFC512A9209BC0034D768 /* ViewController.swift */,
+				E6EEFCE42A9454ED0034D768 /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -199,6 +217,8 @@
 		E6EEFC802A920A3D0034D768 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E6EEFCCE2A93D4B90034D768 /* Button */,
+				E6EEFCCC2A93D4B90034D768 /* Dummy */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +226,8 @@
 		E6EEFC812A920A4C0034D768 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E6EEFCDE2A93DB3B0034D768 /* Core.swift */,
+				E6EEFCDC2A93DB370034D768 /* CoreDelegate.swift */,
 				E6EEFC852A920AB60034D768 /* Token */,
 				E6EEFCA02A92878F0034D768 /* Builder */,
 				E6EEFCA12A9287A30034D768 /* Converter */,
@@ -220,6 +242,9 @@
 			children = (
 				E6EEFCC42A93898E0034D768 /* Double+Extension.swift */,
 				E6EEFCC62A9392000034D768 /* Number+Extension.swift */,
+				E6EEFCD82A93D4FF0034D768 /* UIColor+Extension.swift */,
+				E6EEFCE02A93DC460034D768 /* String+Extension.swift */,
+				E6EEFCE22A93DC760034D768 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -354,6 +379,40 @@
 			path = "Number Bucket";
 			sourceTree = "<group>";
 		};
+		E6EEFCCC2A93D4B90034D768 /* Dummy */ = {
+			isa = PBXGroup;
+			children = (
+				E6EEFCCD2A93D4B90034D768 /* DummyView.swift */,
+			);
+			path = Dummy;
+			sourceTree = "<group>";
+		};
+		E6EEFCCE2A93D4B90034D768 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				E6EEFCCF2A93D4B90034D768 /* ButtonView */,
+				E6EEFCD12A93D4B90034D768 /* ButtonsView */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		E6EEFCCF2A93D4B90034D768 /* ButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				E6EEFCD02A93D4B90034D768 /* ButtonView.swift */,
+			);
+			path = ButtonView;
+			sourceTree = "<group>";
+		};
+		E6EEFCD12A93D4B90034D768 /* ButtonsView */ = {
+			isa = PBXGroup;
+			children = (
+				E6EEFCD22A93D4B90034D768 /* ButtonsView.swift */,
+				E6EEFCD32A93D4B90034D768 /* ButtonsViewDelegate.swift */,
+			);
+			path = ButtonsView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -486,12 +545,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6EEFCB32A9373770034D768 /* NumberDirector.swift in Sources */,
-				E6EEFC522A9209BC0034D768 /* ViewController.swift in Sources */,
+				E6EEFCD62A93D4B90034D768 /* ButtonsView.swift in Sources */,
+				E6EEFCD92A93D4FF0034D768 /* UIColor+Extension.swift in Sources */,
+				E6EEFCDF2A93DB3B0034D768 /* Core.swift in Sources */,
+				E6EEFCD52A93D4B90034D768 /* ButtonView.swift in Sources */,
 				E6EEFC902A9211120034D768 /* UnaryOperatorType.swift in Sources */,
 				E6EEFCA82A928C920034D768 /* CalculatorConverter.swift in Sources */,
 				E6EEFCB72A937FBF0034D768 /* NumberRefinery.swift in Sources */,
 				E6EEFCB12A935E880034D768 /* NumberBucket.swift in Sources */,
 				E6EEFCC72A9392000034D768 /* Number+Extension.swift in Sources */,
+				E6EEFCDD2A93DB370034D768 /* CoreDelegate.swift in Sources */,
 				E6EEFCC12A9381670034D768 /* CalculatorNumberDirector.swift in Sources */,
 				E6EEFCA62A928C8B0034D768 /* Converter.swift in Sources */,
 				E6EEFC962A9262160034D768 /* BinaryOperatorType.swift in Sources */,
@@ -501,12 +564,17 @@
 				E6EEFC9C2A9265C70034D768 /* BinaryOperatorAssociativity.swift in Sources */,
 				E6EEFC4E2A9209BC0034D768 /* AppDelegate.swift in Sources */,
 				E6EEFC502A9209BC0034D768 /* SceneDelegate.swift in Sources */,
+				E6EEFCE52A9454ED0034D768 /* ViewController.swift in Sources */,
+				E6EEFCD42A93D4B90034D768 /* DummyView.swift in Sources */,
 				E6EEFC872A920ABC0034D768 /* Token.swift in Sources */,
 				E6EEFC892A920BCA0034D768 /* TokenType.swift in Sources */,
 				E6EEFC9F2A9281FC0034D768 /* TokenFactory.swift in Sources */,
 				E6EEFCC32A9382210034D768 /* CalculatorNumberRefinery.swift in Sources */,
 				E6EEFC982A9265280034D768 /* CalculatorBinaryOperator.swift in Sources */,
 				E6EEFCC52A93898E0034D768 /* Double+Extension.swift in Sources */,
+				E6EEFCE12A93DC460034D768 /* String+Extension.swift in Sources */,
+				E6EEFCD72A93D4B90034D768 /* ButtonsViewDelegate.swift in Sources */,
+				E6EEFCE32A93DC760034D768 /* UIView+Extension.swift in Sources */,
 				E6EEFCAE2A934E2B0034D768 /* CalculatorEvaluator.swift in Sources */,
 				E6EEFCAA2A928CCC0034D768 /* Typealiases.swift in Sources */,
 				E6EEFC942A9261FD0034D768 /* BinaryOperator.swift in Sources */,
