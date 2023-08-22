@@ -1,6 +1,6 @@
 //
 //  CalculatorNumberDirector.swift
-//  clone
+//  UIKit-Calculator
 //
 //  Created by Buzurgmexr Sultonaliyev on 21/08/23.
 //

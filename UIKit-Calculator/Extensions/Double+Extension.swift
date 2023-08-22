@@ -12,9 +12,9 @@ extension Double {
   /// Returns `true` if number is negative.
   var isNegative: Bool { self < 0 }
 
-  /// <#Description#>
+  /// Get length of integer part.
   ///
-  /// - Returns: <#description#>
+  /// - Returns: The integer value that count of the integer part.
   func getLengthOfIntegerPart() -> Int {
     let absoluteDouble = abs(self).rounded(.down)
     let integerPart = absoluteDouble.truncatingRemainder(dividingBy: 1) == 0
