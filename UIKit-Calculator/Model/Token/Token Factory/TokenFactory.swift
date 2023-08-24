@@ -10,7 +10,7 @@ struct TokenFactory {
   ///
   /// - Parameter value: The string value for creating token content.
   /// - Returns: A Token from `value`.
-  func create(_ value: String) -> Token {
+  func createToken(from value: String) -> Token {
     if isOperand(value) {
       return create(token: value, for: .operand)
     } else if isUnaryOperator(value) {

@@ -13,7 +13,7 @@ class Core {
   private let factory = TokenFactory()
   
   /// Expression converter.
-  private let converter = Converter()
+  private let converter = CalculatorConverter()
   
   /// Expression evaluator.
   private let evaluator = CalculatorEvaluator()
@@ -73,16 +73,18 @@ class Core {
   ///
   /// - Parameter binaryOperator: Received binary operator.
   func receive(binaryOperator: String) {
-    let token = makeToken(from: binaryOperator)
+    let binaryOperatorToken = makeToken(from: binaryOperator)
     
     if isEvaluating { stopContinuingEvaluation() }
     
     if mostRecentTokenIsBinaryOperator() {
-      replaceBinaryOperator(with: token)
+      replaceBinaryOperator(with: binaryOperatorToken)
       return
+    } else if needBreakingExpression(with: binaryOperatorToken) {
+      breakExpression()
     }
     
-    add(binaryOperator: token)
+    add(binaryOperator: binaryOperatorToken)
   }
   
   /// Received unary operator from `unaryOperator`.
@@ -91,26 +93,49 @@ class Core {
   func receive(unaryOperator: String) {
     guard buildingExpression.count >= 1 else { return }
     
-    let token = makeToken(from: unaryOperator)
+    let unaryOperatorToken = makeToken(from: unaryOperator)
     
-    if let extracted = token.extractUnaryOperator {
-      if isIncompleteExpression() {
+    if isIncompleteExpression() {
+      if let extracted = unaryOperatorToken.extractUnaryOperator {
         let value = extracted.calculate(number: buildingExpression.remove()!.extractOperand!)
         let valueToken = makeToken(from: String(value))
         buildingExpression.value = [valueToken]
         self.value = value
-        return
-      } else if isUnbalancedExpression() {
+      }
+      return
+    } else if isUnbalancedExpression() {
+      if let extracted = unaryOperatorToken.extractUnaryOperator {
         var number = mostRecentOperandToken!.extractOperand!
         number = extracted.calculate(number: number)
         delegate?.getReplaceable(value: number)
-      } else {
+      }
+    } else {
+      if let extracted = unaryOperatorToken.extractUnaryOperator {
         var number = mostRecentToken!.extractOperand!
         number = extracted.calculate(number: number)
         delegate?.getReplaceable(value: number)
         buildingExpression.remove()
       }
     }
+
+//    if let extracted = unaryOperatorToken.extractUnaryOperator {
+//      if isIncompleteExpression() {
+//        let value = extracted.calculate(number: buildingExpression.remove()!.extractOperand!)
+//        let valueToken = makeToken(from: String(value))
+//        buildingExpression.value = [valueToken]
+//        self.value = value
+//        return
+//      } else if isUnbalancedExpression() {
+//        var number = mostRecentOperandToken!.extractOperand!
+//        number = extracted.calculate(number: number)
+//        delegate?.getReplaceable(value: number)
+//      } else {
+//        var number = mostRecentToken!.extractOperand!
+//        number = extracted.calculate(number: number)
+//        delegate?.getReplaceable(value: number)
+//        buildingExpression.remove()
+//      }
+//    }
   }
   
   /// Receive evaluation.
@@ -188,8 +213,8 @@ private extension Core {
   
   /// Prepare continuing evaluation.
   func prepareContinuingEvaluation() {
-    add(operand: evaluatedOperand!)
     add(binaryOperator: evaluatedBinaryOperator!)
+    add(operand: evaluatedOperand!)
   }
   
   /// Make token from `value`.
@@ -197,7 +222,7 @@ private extension Core {
   /// - Parameter value: The String value needs to create token.
   /// - Returns: Token that created from `value`.
   func makeToken(from value: String) -> Token {
-    factory.create(value)
+    factory.createToken(from: value)
   }
   
   /// Add token to building expression.

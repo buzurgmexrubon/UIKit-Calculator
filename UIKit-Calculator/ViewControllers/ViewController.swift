@@ -26,10 +26,10 @@ class ViewController: UIViewController {
   private var core = Core()
   
   /// Number director.
-  private var director = NumberDirector(builder: Builder<String>())
+  private var director = CalculatorNumberDirector(builder: Builder<String>())
   
   /// Number refinery.
-  private var refinery = NumberRefinery(9)
+  private var refinery = CalculatorNumberRefinery(maxLength: 9)
   
   /// Number bucket.
   private var bucket = NumberBucket<String>()
@@ -108,6 +108,7 @@ class ViewController: UIViewController {
   /// Clear all and prepare to starting state.
   func deepClear() {
     director.receiveClear()
+    updateOperationView()
     pourBucketIfNeeded()
     sendClear()
     makeButtonDeselect()
@@ -255,7 +256,9 @@ private extension ViewController {
       send(operand: poured)
     } else {
       let operand = requestOperand()
-      if !operand.isEmpty { send(operand: operand) }
+      if !operand.isEmpty {
+        send(operand: operand)
+      }
     }
   }
   
@@ -301,7 +304,6 @@ private extension ViewController {
   
   /// Add value to bucket.
   ///
-  ///
   /// - Parameter number: The Double value that needs add to bucket.
   func fillBucket(with number: Double) {
     bucket.value = String(number)
@@ -323,8 +325,9 @@ private extension ViewController {
   /// - Parameter value: The string value that needs represent
   /// in ``mainDisplay``.
   func updateOperationView(with value: String? = nil) {
-    if let newValue = value { mainDisplay.text = newValue }
-    else {
+    if let value {
+      mainDisplay.text = value
+    } else {
       let peaked = director.receiveBorrowingOperand()
       mainDisplay.text = refinery.convert(peaked)
       if let lastOfPeaked = peaked.last, lastOfPeaked == "." {

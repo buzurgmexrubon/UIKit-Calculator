@@ -363,7 +363,6 @@
                                                                 <real key="value" value="1.5"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="labelValue" value="−"/>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="labelColor">
                                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
@@ -371,6 +370,7 @@
                                                                 <color key="value" red="0.94365936520000004" green="0.79043608899999995" blue="0.58820366859999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isZeroButton" value="NO"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="labelValue" value="-"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="actionForBinaryOperatorButton:" destination="S5S-4z-MNn" eventType="touchUpInside" id="1T8-PT-Btu"/>
