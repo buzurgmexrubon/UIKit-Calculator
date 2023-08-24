@@ -131,7 +131,8 @@ private extension ViewController {
         ? String(poured.dropLast())
         : "-\(poured)"
       fillBucket(with: Double(converted)!)
-      updateOperationView(with: make(expressibleNumber: Double(converted)!))
+      let expressibleNumber = make(expressibleNumber: Double(converted)!)
+      updateOperationView(with: expressibleNumber)
     } else {
       handleNegativeSign()
       updateOperationView()

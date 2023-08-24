@@ -16,7 +16,11 @@ class Core {
   private let converter = Converter()
   
   /// Expression evaluator.
-  private let evaluator = Evaluator()
+  private let evaluator = CalculatorEvaluator()
+  
+  /// Checking new binary operator token precedence greater than or equal from
+  /// old binary operator token.
+  private let checker = ExpressionBreaker()
   
   /// Building expression.
   private let buildingExpression = Builder<Token>()
@@ -253,6 +257,16 @@ private extension Core {
   ///  Otherwise, `false`.
   func mostRecentTokenIsBinaryOperator() -> Bool {
     mostRecentToken?.extractBinaryOperator != nil
+  }
+  
+  /// Returns breaking expression need or not.
+  ///
+  /// - Parameter newToken: The new token.
+  /// - Returns: `true` if `firstToken` is greater than or
+  /// equal to `secondToken`. Otherwise, `false`.
+  func needBreakingExpression(with newToken: Token) -> Bool {
+    guard let oldToken = mostRecentBinaryOperatorToken else { return false }
+    return checker.check(oldToken, newToken)
   }
   
   /// Clear build expression elements.
