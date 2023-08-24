@@ -16,9 +16,6 @@ class ViewController: UIViewController {
   /// Display view that top view of calculator.
   @IBOutlet var displayView: UIView!
   
-  /// Buttons view that bottom view of calcualator.
-  @IBOutlet var buttonsView: ButtonsView!
-  
   /// Clear button.
   @IBOutlet var clearButton: ButtonView!
 
@@ -38,7 +35,6 @@ class ViewController: UIViewController {
   private var selectedButton: ButtonView?
 
   override func viewDidLoad() {
-    buttonsView.delegate = self
     setupCustomGestures()
     super.viewDidLoad()
   }
@@ -410,19 +406,6 @@ private extension ViewController {
     {
       mainDisplay.becomeFirstResponder()
       UIMenuController.shared.showMenu(from: recognizedView, rect: mainDisplay.frame)
-    }
-  }
-}
-
-// MARK: - ButtonsViewDelegate
-
-extension ViewController: ButtonsViewDelegate {
-  /// Send selected button from received `button`.
-  ///
-  /// - Parameter button: The button that needs make selected button.
-  func send(selectedButton button: ButtonView) {
-    if ["+", "−", "÷", "×"].contains(button.buttonValue) {
-      selectedButton = button
     }
   }
 }

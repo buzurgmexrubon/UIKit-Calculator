@@ -40,10 +40,7 @@
 		E6EEFCC32A9382210034D768 /* NumberRefinery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCC22A9382210034D768 /* NumberRefinery.swift */; };
 		E6EEFCC52A93898E0034D768 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCC42A93898E0034D768 /* Double+Extension.swift */; };
 		E6EEFCC72A9392000034D768 /* Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCC62A9392000034D768 /* Number+Extension.swift */; };
-		E6EEFCD42A93D4B90034D768 /* DummyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCCD2A93D4B90034D768 /* DummyView.swift */; };
 		E6EEFCD52A93D4B90034D768 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCD02A93D4B90034D768 /* ButtonView.swift */; };
-		E6EEFCD62A93D4B90034D768 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCD22A93D4B90034D768 /* ButtonsView.swift */; };
-		E6EEFCD72A93D4B90034D768 /* ButtonsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCD32A93D4B90034D768 /* ButtonsViewDelegate.swift */; };
 		E6EEFCD92A93D4FF0034D768 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCD82A93D4FF0034D768 /* UIColor+Extension.swift */; };
 		E6EEFCDD2A93DB370034D768 /* CoreDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCDC2A93DB370034D768 /* CoreDelegate.swift */; };
 		E6EEFCDF2A93DB3B0034D768 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFCDE2A93DB3B0034D768 /* Core.swift */; };
@@ -107,10 +104,7 @@
 		E6EEFCC22A9382210034D768 /* NumberRefinery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberRefinery.swift; sourceTree = "<group>"; };
 		E6EEFCC42A93898E0034D768 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		E6EEFCC62A9392000034D768 /* Number+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Extension.swift"; sourceTree = "<group>"; };
-		E6EEFCCD2A93D4B90034D768 /* DummyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyView.swift; sourceTree = "<group>"; };
 		E6EEFCD02A93D4B90034D768 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
-		E6EEFCD22A93D4B90034D768 /* ButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
-		E6EEFCD32A93D4B90034D768 /* ButtonsViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsViewDelegate.swift; sourceTree = "<group>"; };
 		E6EEFCD82A93D4FF0034D768 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		E6EEFCDC2A93DB370034D768 /* CoreDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDelegate.swift; sourceTree = "<group>"; };
 		E6EEFCDE2A93DB3B0034D768 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
@@ -218,7 +212,6 @@
 			isa = PBXGroup;
 			children = (
 				E6EEFCCE2A93D4B90034D768 /* Button */,
-				E6EEFCCC2A93D4B90034D768 /* Dummy */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -379,19 +372,10 @@
 			path = "Number Bucket";
 			sourceTree = "<group>";
 		};
-		E6EEFCCC2A93D4B90034D768 /* Dummy */ = {
-			isa = PBXGroup;
-			children = (
-				E6EEFCCD2A93D4B90034D768 /* DummyView.swift */,
-			);
-			path = Dummy;
-			sourceTree = "<group>";
-		};
 		E6EEFCCE2A93D4B90034D768 /* Button */ = {
 			isa = PBXGroup;
 			children = (
 				E6EEFCCF2A93D4B90034D768 /* ButtonView */,
-				E6EEFCD12A93D4B90034D768 /* ButtonsView */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -402,15 +386,6 @@
 				E6EEFCD02A93D4B90034D768 /* ButtonView.swift */,
 			);
 			path = ButtonView;
-			sourceTree = "<group>";
-		};
-		E6EEFCD12A93D4B90034D768 /* ButtonsView */ = {
-			isa = PBXGroup;
-			children = (
-				E6EEFCD22A93D4B90034D768 /* ButtonsView.swift */,
-				E6EEFCD32A93D4B90034D768 /* ButtonsViewDelegate.swift */,
-			);
-			path = ButtonsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -545,7 +520,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6EEFCB32A9373770034D768 /* CalculatorNumberDirector.swift in Sources */,
-				E6EEFCD62A93D4B90034D768 /* ButtonsView.swift in Sources */,
 				E6EEFCD92A93D4FF0034D768 /* UIColor+Extension.swift in Sources */,
 				E6EEFCDF2A93DB3B0034D768 /* Core.swift in Sources */,
 				E6EEFCD52A93D4B90034D768 /* ButtonView.swift in Sources */,
@@ -564,7 +538,6 @@
 				E6EEFC4E2A9209BC0034D768 /* AppDelegate.swift in Sources */,
 				E6EEFC502A9209BC0034D768 /* SceneDelegate.swift in Sources */,
 				E6EEFCE52A9454ED0034D768 /* ViewController.swift in Sources */,
-				E6EEFCD42A93D4B90034D768 /* DummyView.swift in Sources */,
 				E6EEFC872A920ABC0034D768 /* Token.swift in Sources */,
 				E6EEFC892A920BCA0034D768 /* TokenContentType.swift in Sources */,
 				E6EEFC9F2A9281FC0034D768 /* TokenFactory.swift in Sources */,
@@ -572,7 +545,6 @@
 				E6EEFC982A9265280034D768 /* CalculatorBinaryOperator.swift in Sources */,
 				E6EEFCC52A93898E0034D768 /* Double+Extension.swift in Sources */,
 				E6EEFCE12A93DC460034D768 /* String+Extension.swift in Sources */,
-				E6EEFCD72A93D4B90034D768 /* ButtonsViewDelegate.swift in Sources */,
 				E6EEFCE32A93DC760034D768 /* UIView+Extension.swift in Sources */,
 				E6EEFCAE2A934E2B0034D768 /* Evaluator.swift in Sources */,
 				E6EEFCAA2A928CCC0034D768 /* Typealiases.swift in Sources */,
